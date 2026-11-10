@@ -48,10 +48,8 @@ No API key is required by the current implementation. Verse text is retrieved fr
 Mikveh is not currently available in the Chrome Web Store. Clone the official project repository when its URL is published:
 
 ```bash
-git clone <REPOSITORY-URL>
+git clone https://github.com/darshseraphic/Mikveh.git
 ```
-
-Replace `<REPOSITORY-URL>` with the official repository address once it is available. No Chrome Web Store link or direct ZIP download is provided here.
 
 ### Add Mikveh to Chrome
 
