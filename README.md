@@ -4,8 +4,6 @@
 
 **Mikveh** is a small, focused Bible verse finder for Google Chrome. Open the extension to receive a random verse, or search for a passage by entering a reference such as `Luke 1:37`. Read the result in a clean popup, copy it with its reference, and choose a System, Light, or Dark appearance.
 
-![alt text](image.png)
-
 > **Project status:** Mikveh is not listed in the Chrome Web Store. The project is installed from its Git repository as an unpacked Chrome extension.
 
 ## Contents
@@ -50,8 +48,10 @@ No API key is required by the current implementation. Verse text is retrieved fr
 Mikveh is not currently available in the Chrome Web Store. Clone the official project repository when its URL is published:
 
 ```bash
-git clone https://github.com/darshseraphic/Mikveh.git
+git clone <REPOSITORY-URL>
 ```
+
+Replace `<REPOSITORY-URL>` with the official repository address once it is available. No Chrome Web Store link or direct ZIP download is provided here.
 
 ### Add Mikveh to Chrome
 

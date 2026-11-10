@@ -10,11 +10,11 @@ From the repository root, run:
 python -m http.server 8000
 ```
 
-Then open `http://localhost:8000/docs/` in a browser. No build step or package installation is required. The website uses local HTML, CSS, JavaScript, configuration, and the shared icon assets in the repository-level `icons/` directory. It does not load external fonts or scripts and does not request verse data from the Bible API.
+Then open `http://localhost:8000/docs/` in a browser. No build step or package installation is required. The website is self-contained inside `docs/`, including its own `docs/icons/` copies of the extension artwork. This is required because GitHub Pages publishes only the selected `/docs` folder; files outside that folder are not available to the deployed site. It does not load external fonts or scripts and does not request verse data from the Bible API.
 
 ## Publish with GitHub Pages
 
-In the repository's GitHub Pages settings, choose **Deploy from a branch**, select the intended branch, and set the folder to **`/docs`**. The website entry point is `docs/index.html`. The shared extension icons remain in the repository-level `icons/` directory and are referenced with `../icons/` paths.
+In the repository's GitHub Pages settings, choose **Deploy from a branch**, select the intended branch, and set the folder to **`/docs`**. The website entry point is `docs/index.html`. Website image and favicon assets are served from `docs/icons/`. The extension continues to use the original assets in the repository-level `icons/` directory; keep both icon folders in sync when changing the Mikveh artwork.
 
 Add the official HTTPS repository address to `docs/config.js` when it has been published:
 
@@ -33,7 +33,7 @@ The installation block intentionally contains only a Git clone command. There is
 - `script.js` — System/Light/Dark theme persistence, responsive navigation, and clone-command copy control.
 - `config.js` — placeholder for the official repository URL.
 - `DESIGN_CREDITS.md` — reference and asset notes.
-- `../icons/` — shared Mikveh extension icon artwork used by the website.
+- `icons/` — website-local copies of the Mikveh icon artwork, including the favicon and cross mark. These files must remain inside `docs/` for GitHub Pages deployments.
 
 ## Product accuracy
 

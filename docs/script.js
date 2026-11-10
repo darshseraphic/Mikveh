@@ -86,7 +86,7 @@
     : '';
   const cloneText = repositoryUrl
     ? `git clone ${repositoryUrl}`
-    : 'git clone https://github.com/darshseraphic/Mikveh.git';
+    : 'git clone <REPOSITORY-URL>';
 
   if (cloneCommand) cloneCommand.textContent = cloneText;
 

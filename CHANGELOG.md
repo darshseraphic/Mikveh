@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Fixed GitHub Pages branding assets by placing a copy of the Mikveh icon set inside `docs/icons/` and updating the website favicon, header, preview, and privacy-mark paths to use those published assets.
+- Updated the website deployment guide to explain that a `/docs` GitHub Pages deployment can only serve files contained in `docs/`.
+
+
 Notable changes to Mikveh are documented here. The format follows a simple version-and-date history.
 
 ## [Unreleased]

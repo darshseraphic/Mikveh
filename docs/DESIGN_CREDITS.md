@@ -15,3 +15,8 @@ This note records the attribution stated in the reference material; Mikveh does 
 ## Mikveh artwork
 
 The `icons/logo.svg` cross mark and the PNG icon sizes in `icons/` are the Mikveh project assets. They are included in the Software and are subject to the terms of `LICENSE.txt`, unless explicitly identified otherwise.
+
+
+## Website asset copies
+
+The website uses the copies in `docs/icons/` because GitHub Pages configured to publish the `/docs` folder cannot serve files stored outside that folder. The canonical extension icon artwork remains in the repository-level `icons/` directory; keep the website copies in sync when the artwork changes.
