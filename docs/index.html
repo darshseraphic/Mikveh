@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1f1f1">
+  <meta name="description" content="Mikveh is a focused Chrome extension for discovering a random Bible verse or looking up a passage by book, chapter, and verse.">
+  <meta property="og:title" content="Mikveh — Scripture, close at hand">
+  <meta property="og:description" content="Find a Bible verse, discover a random passage, and keep Scripture close from your Chrome toolbar.">
+  <meta property="og:type" content="website">
+  <title>Mikveh — Scripture, close at hand</title>
+  <link rel="icon" type="image/png" href="../icons/icon32.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner page-width">
+      <a class="brand" href="#top" aria-label="Mikveh home">
+        <span class="brand-mark"><img src="../icons/icon32.png" width="24" height="24" alt=""></span>
+        <span>mikveh</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#experience">Experience</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#installation">Install</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Change theme" title="Cycle theme: System, Light, Dark">
+          <svg class="sun-icon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.2"/><path d="M10 1.8v2M10 16.2v2M18.2 10h-2M3.8 10h-2m14-5.8-1.4 1.4M5.6 14.4l-1.4 1.4m11.6 0-1.4-1.4M5.6 5.6 4.2 4.2"/></svg>
+          <svg class="moon-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16.8 12.3A7.2 7.2 0 0 1 7.7 3.2a7.4 7.4 0 1 0 9.1 9.1Z"/></svg>
+        </button>
+        <a class="header-link" href="#installation">Get Mikveh <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero page-width" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-rule"></span> Chrome extension / Bible verse finder</p>
+        <h1 id="hero-title">Scripture,<br><span>close at hand.</span></h1>
+        <p class="hero-lede">Mikveh brings a fresh Bible verse into your day and makes it simple to find a passage by its book, chapter, and verse — right from your Chrome toolbar.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#features">Explore Mikveh <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#installation">Install from source <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-meta" aria-label="Product details">
+          <span>Manifest V3 extension</span><i aria-hidden="true"></i><span>World English Bible</span><i aria-hidden="true"></i><span>Source available</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" id="preview">
+        <div class="visual-heading">
+          <span>01 / The Mikveh popup</span>
+          <span class="visual-heading-line"></span>
+          <span>MIKVEH 1.0.0</span>
+        </div>
+
+        <div class="browser-preview" aria-label="Illustration of the Mikveh Chrome extension popup">
+          <div class="browser-topbar">
+            <div class="window-controls" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="browser-tab"><img src="../icons/icon16.png" width="14" height="14" alt=""><span>mikveh</span></div>
+            <span class="browser-menu" aria-hidden="true">···</span>
+          </div>
+
+          <div class="popup-preview">
+            <div class="preview-topline">
+              <div class="preview-brand"><img src="../icons/logo.svg" alt="" width="30" height="30"><strong>mikveh</strong></div>
+              <span class="preview-theme" aria-hidden="true">☼</span>
+            </div>
+            <div class="preview-search">
+              <span class="preview-search-icon" aria-hidden="true">⌕</span>
+              <span>Search verse… (e.g. Luke 1:37)</span>
+              <b aria-hidden="true">↵</b>
+            </div>
+            <div class="preview-verse-card">
+              <div class="preview-card-label"><span>RANDOM VERSE</span><span>WORLD ENGLISH BIBLE</span></div>
+              <h3>Philippians 4:13</h3>
+              <p>I can do all things through Christ who strengthens me.</p>
+              <div class="preview-card-rule"></div>
+              <span class="preview-card-note">A moment for reading and reflection.</span>
+            </div>
+            <div class="preview-actions">
+              <span class="preview-action-primary">↻ &nbsp; New verse</span>
+              <span class="preview-action-secondary">▢ &nbsp; Copy</span>
+            </div>
+            <div class="preview-foot">A VERSE TO CARRY WITH YOU</div>
+          </div>
+        </div>
+
+        <div class="demo-examples" aria-label="Example Bible references">
+          <span>REFERENCE EXAMPLES</span>
+          <span class="demo-chip active">Luke 1:37</span>
+          <span class="demo-chip">John 3:16</span>
+          <span class="demo-chip">Psalm 23:1</span>
+        </div>
+        <p class="visual-note"><span>↳</span> A visual preview of the extension popup; the displayed verse is an example.</p>
+      </div>
+    </section>
+
+    <section class="fact-strip" aria-label="Mikveh at a glance">
+      <div class="fact-strip-inner page-width">
+        <div class="fact-item"><strong>01</strong><span>Random verse</span><p>Discover a passage on open</p></div>
+        <div class="fact-item"><strong>02</strong><span>Reference search</span><p>Find a specific verse</p></div>
+        <div class="fact-item"><strong>03</strong><span>Theme modes</span><p>System, Light and Dark</p></div>
+        <div class="fact-item"><strong>04</strong><span>Copy verse</span><p>Take the text with you</p></div>
+      </div>
+    </section>
+
+    <section class="section page-width" id="features" aria-labelledby="features-title">
+      <div class="section-label"><span class="section-line"></span> 02 / What Mikveh does</div>
+      <div class="section-intro two-column">
+        <h2 id="features-title">A simple way to<br><span>meet the Word.</span></h2>
+        <p>Mikveh keeps its purpose focused: bring a passage forward, help you find the reference you have in mind, and make the text easy to copy. No account or complicated setup is part of the current experience.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-number">01</div><div class="feature-icon">✳</div>
+          <h3>Discover a random verse</h3>
+          <p>Open the popup and Mikveh requests a random Bible verse, giving you a passage to read without needing to choose one first.</p>
+          <code>Open popup → fresh passage</code>
+          <span class="feature-tag">RANDOM VERSE</span>
+        </article>
+        <article class="feature-card">
+          <div class="feature-number">02</div><div class="feature-icon">⌕</div>
+          <h3>Search by reference</h3>
+          <p>Enter a book, chapter, and verse in a familiar format. Mikveh checks the reference and displays the matching passage.</p>
+          <code>Luke 1:37 · John 3:16</code>
+          <span class="feature-tag">VERSE LOOKUP</span>
+        </article>
+        <article class="feature-card">
+          <div class="feature-number">03</div><div class="feature-icon">▢</div>
+          <h3>Copy the passage</h3>
+          <p>Copy the verse together with its reference, ready to paste into a note, message, or personal study document.</p>
+          <code>Reference + verse text</code>
+          <span class="feature-tag">CLIPBOARD</span>
+        </article>
+        <article class="feature-card">
+          <div class="feature-number">04</div><div class="feature-icon">◐</div>
+          <h3>Choose your theme</h3>
+          <p>Cycle between System, Light, and Dark with one small button. Your selection is remembered in Chrome storage.</p>
+          <code>System → Light → Dark</code>
+          <span class="feature-tag">APPEARANCE</span>
+        </article>
+        <article class="feature-card">
+          <div class="feature-number">05</div><div class="feature-icon">Aa</div>
+          <h3>Read without clutter</h3>
+          <p>A compact popup gives the reference and verse text room to breathe, with clear labels and controls close to the content.</p>
+          <code>One focused popup</code>
+          <span class="feature-tag">READING FIRST</span>
+        </article>
+        <article class="feature-card">
+          <div class="feature-number">06</div><div class="feature-icon">↗</div>
+          <h3>Keep it close</h3>
+          <p>Pin Mikveh to the Chrome toolbar and open it when you want to discover a passage or look up a reference.</p>
+          <code>Chrome toolbar access</code>
+          <span class="feature-tag">MANIFEST V3</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="function-section section-rule" aria-labelledby="reference-title">
+      <div class="page-width">
+        <div class="section-label"><span class="section-line"></span> 03 / Reference search</div>
+        <div class="section-intro two-column">
+          <h2 id="reference-title">Bring a reference.<br><span>Find the passage.</span></h2>
+          <p>Type the reference the way you would say it. Mikveh accepts the book name followed by the chapter and verse number, separated by a colon.</p>
+        </div>
+        <div class="reference-directory">
+          <article class="reference-row">
+            <div class="directory-index">A</div>
+            <div class="directory-title"><h3>Standard reference</h3><p>Book name, chapter, colon, verse</p></div>
+            <div class="directory-content"><code>Luke 1:37</code><span>Use spaces between the book name and chapter.</span></div>
+          </article>
+          <article class="reference-row">
+            <div class="directory-index">B</div>
+            <div class="directory-title"><h3>Names with multiple words</h3><p>Keep the full book name together</p></div>
+            <div class="directory-content"><code>1 Corinthians 13:4</code><span>Book names can include a number or more than one word.</span></div>
+          </article>
+          <article class="reference-row">
+            <div class="directory-index">C</div>
+            <div class="directory-title"><h3>Slash notation</h3><p>Alternative input retained for compatibility</p></div>
+            <div class="directory-content"><code>luke/1:37</code><span>The extension also accepts the book/chapter:verse form.</span></div>
+          </article>
+          <article class="reference-row">
+            <div class="directory-index">D</div>
+            <div class="directory-title"><h3>Translation</h3><p>World English Bible (WEB)</p></div>
+            <div class="directory-content"><code>WEB</code><span>The current extension uses this translation by default; there is no in-popup translation selector.</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section page-width workspace-section" id="experience" aria-labelledby="experience-title">
+      <div class="section-label"><span class="section-line"></span> 04 / A focused experience</div>
+      <div class="section-intro two-column">
+        <h2 id="experience-title">Open to discover.<br><span>Search when you know.</span></h2>
+        <p>The popup is designed around two common ways to read: let a random verse find you, or enter a reference you already have. The same card presents the passage either way.</p>
+      </div>
+      <div class="workspace-grid">
+        <article class="workspace-card">
+          <div class="workspace-card-visual discover-visual">
+            <div class="mini-window-head"><span></span><span></span><span></span><b>mikveh / discover</b></div>
+            <div class="mini-popup">
+              <div class="mini-popup-brand"><img src="../icons/logo.svg" alt="" width="19" height="19"><b>mikveh</b><span>◐</span></div>
+              <div class="mini-popup-card"><small>RANDOM VERSE</small><strong>Philippians 4:13</strong><p>A passage appears here with its reference and readable text.</p></div>
+              <div class="mini-popup-actions"><b>↻ &nbsp; New verse</b><i>▢ &nbsp; Copy</i></div>
+            </div>
+          </div>
+          <div class="workspace-card-copy"><span class="workspace-index">01 / DISCOVER</span><h3>Start with a random verse</h3><p>Open Mikveh and let the extension request a fresh random passage. Select another verse whenever you want a different reading.</p></div>
+        </article>
+        <article class="workspace-card">
+          <div class="workspace-card-visual search-visual">
+            <div class="mini-window-head"><span></span><span></span><span></span><b>mikveh / search</b></div>
+            <div class="mini-popup">
+              <div class="mini-popup-brand"><img src="../icons/logo.svg" alt="" width="19" height="19"><b>mikveh</b><span>◐</span></div>
+              <div class="mini-search-field"><span>⌕</span><b>John 3:16</b><i>↵</i></div>
+              <div class="mini-popup-card"><small>SEARCH RESULT</small><strong>John 3:16</strong><p>The requested verse is shown in the same clean reading card.</p></div>
+              <div class="mini-popup-actions"><b>↻ &nbsp; New verse</b><i>▢ &nbsp; Copy</i></div>
+            </div>
+          </div>
+          <div class="workspace-card-copy"><span class="workspace-index">02 / SEARCH</span><h3>Go straight to a reference</h3><p>Enter a Bible reference such as John 3:16 and submit it. The matching passage replaces the current card when the request succeeds.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="steps-section section-rule" id="how-it-works" aria-labelledby="steps-title">
+      <div class="page-width steps-layout">
+        <div class="steps-intro">
+          <div class="section-label"><span class="section-line"></span> 05 / How it works</div>
+          <h2 id="steps-title">Open. Search.<br><em>Read and reflect.</em></h2>
+          <p>Mikveh keeps the flow direct. The extension requests verse text when needed, then presents the reference and passage together in the popup.</p>
+        </div>
+        <div class="steps-list">
+          <article class="step-row"><span class="step-number">01</span><div class="step-copy"><h3>Open the popup</h3><p>Click the pinned Mikveh icon. A random verse is requested automatically using the World English Bible endpoint.</p></div><span class="step-icon" aria-hidden="true">✳</span></article>
+          <article class="step-row"><span class="step-number">02</span><div class="step-copy"><h3>Search or discover</h3><p>Use the reference field for a specific passage, or choose <b>New verse</b> to request another random selection.</p></div><span class="step-icon" aria-hidden="true">⌕</span></article>
+          <article class="step-row"><span class="step-number">03</span><div class="step-copy"><h3>Read and copy</h3><p>Read the returned passage and use <b>Copy</b> to copy its reference and text together.</p></div><span class="step-icon" aria-hidden="true">▢</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="examples-section page-width" aria-labelledby="examples-title">
+      <div class="section-label"><span class="section-line"></span> 06 / Search examples</div>
+      <div class="examples-heading"><h2 id="examples-title">Start with a reference.</h2><p>These are example inputs you can enter into the search field in the extension.</p></div>
+      <div class="example-grid">
+        <article class="example-card"><span>01 / GOSPELS</span><h3>Luke 1:37</h3><code>Luke 1:37</code><p>Book of Luke, chapter 1, verse 37.</p><strong>Book · Chapter · Verse</strong></article>
+        <article class="example-card"><span>02 / GOSPELS</span><h3>John 3:16</h3><code>John 3:16</code><p>Book of John, chapter 3, verse 16.</p><strong>Book · Chapter · Verse</strong></article>
+        <article class="example-card"><span>03 / PSALMS</span><h3>Psalm 23:1</h3><code>Psalm 23:1</code><p>Psalm 23, verse 1.</p><strong>Book · Chapter · Verse</strong></article>
+      </div>
+      <p class="fine-print">Reference validity is checked by the Bible API. A syntactically valid input may still fail if the book, chapter, or verse does not exist in the selected translation.</p>
+    </section>
+
+    <section class="privacy-section page-width" id="privacy" aria-labelledby="privacy-title">
+      <div class="privacy-visual" aria-hidden="true">
+        <div class="privacy-mark-wrap"><img src="../icons/logo.svg" alt="" width="100" height="100"></div>
+        <div class="privacy-orbit orbit-one"></div><div class="privacy-orbit orbit-two"></div>
+        <span class="privacy-caption">A SMALL, FOCUSED TOOL</span>
+      </div>
+      <div class="privacy-copy">
+        <div class="section-label"><span class="section-line"></span> 07 / Privacy &amp; security</div>
+        <h2 id="privacy-title">Only the access<br>the feature needs.</h2>
+        <p>Mikveh uses Chrome's storage permission to remember your theme preference and a host permission for HTTPS requests to <code>bible-api.com</code>, which provides the verse data.</p>
+        <p>The extension does not request permission to read your open tabs, page contents, browsing history, bookmarks, or downloads. It does not require an account.</p>
+        <p>Verse lookups and random-verse requests are sent to the Bible API. The API receives the requested reference (for searches) and normal request metadata such as IP address. Mikveh does not control the API provider's logging or retention practices.</p>
+        <p class="privacy-caveat"><span aria-hidden="true">i</span><span>The popup needs an internet connection to retrieve verse text. Theme choice is stored locally using Chrome extension storage. The current version does not include a verse-history or favourites feature.</span></p>
+        <a class="text-link" href="../SECURITY.md">Read the security notes <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="install-section" id="installation" aria-labelledby="install-title">
+      <div class="page-width install-inner">
+        <div class="install-copy">
+          <div class="section-label light-label"><span class="section-line"></span> 08 / Get started</div>
+          <h2 id="install-title">Bring Mikveh<br><em>to Chrome.</em></h2>
+          <p>Mikveh is not currently listed in the Chrome Web Store. Get the project source with Git, then load the project folder as an unpacked extension.</p>
+          <div class="install-points">
+            <span><b>01</b> Clone the repository</span>
+            <span><b>02</b> Enable Developer mode</span>
+            <span><b>03</b> Load the folder with manifest.json</span>
+          </div>
+        </div>
+        <div class="install-panel">
+          <div class="install-panel-top"><span>TERMINAL / CLONE SOURCE</span><span>GIT</span></div>
+          <div class="command-line"><span>$</span><code id="clone-command">git clone &lt;https://github.com/darshseraphic/Mikveh.git&gt;</code><button id="copy-clone" type="button" aria-label="Copy git clone command" title="Copy command"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="7" y="6" width="9" height="11" rx="1.5"/><path d="M13 6V4.5A1.5 1.5 0 0 0 11.5 3h-7A1.5 1.5 0 0 0 3 4.5v9A1.5 1.5 0 0 0 4.5 15H7"/></svg></button></div>
+          <div class="install-next">
+            <p><b>Then in Chrome</b></p>
+            <ol>
+              <li>Open <code>chrome://extensions</code>.</li>
+              <li>Turn on <b>Developer mode</b>.</li>
+              <li>Choose <b>Load unpacked</b>.</li>
+              <li>Select the cloned Mikveh project folder containing <code>manifest.json</code>.</li>
+              <li>Pin Mikveh from Chrome's Extensions menu.</li>
+            </ol>
+          </div>
+          <div class="install-status" id="copy-status" role="status" aria-live="polite">Repository URL will be added here when published.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section" id="project" aria-labelledby="project-title">
+      <div class="page-width project-inner">
+        <div class="project-heading">
+          <div class="section-label"><span class="section-line"></span> 09 / The project</div>
+          <h2 id="project-title">Know what<br>you’re installing.</h2>
+        </div>
+        <div class="project-copy">
+          <p>Mikveh is a proprietary source-available project. Its repository includes the Chrome extension, website, documentation, security guidance, contribution guidance, and license terms.</p>
+          <div class="project-links">
+            <a href="../README.md">Read the project guide <span aria-hidden="true">↗</span></a>
+            <a href="../LICENSE.txt">Review the license <span aria-hidden="true">↗</span></a>
+            <a href="../CONTRIBUTING.md">Contribution guidelines <span aria-hidden="true">↗</span></a>
+            <a href="../CHANGELOG.md">View the changelog <span aria-hidden="true">↗</span></a>
+            <a href="../SECURITY.md">Security notes <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="license-note">Source availability allows inspection under the terms of the license; it does not grant unrestricted rights to modify, fork, redistribute, or commercially use the Software.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section page-width" aria-labelledby="faq-title">
+      <div class="section-label"><span class="section-line"></span> 10 / Frequently asked</div>
+      <div class="faq-layout">
+        <h2 id="faq-title">A few things<br>worth knowing.</h2>
+        <div class="faq-list">
+          <details>
+            <summary>What does Mikveh do?</summary>
+            <p>Mikveh is a Chrome extension that displays a random Bible verse when the popup opens and lets you search for a specific passage using a book, chapter, and verse reference.</p>
+          </details>
+          <details>
+            <summary>Which Bible translation does it use?</summary>
+            <p>The current extension uses the World English Bible (WEB) through bible-api.com. A translation selector is not currently included.</p>
+          </details>
+          <details>
+            <summary>Does Mikveh work offline?</summary>
+            <p>No. The extension needs an internet connection to request random verses and search results from the Bible API. The theme preference remains stored in Chrome, but verse text is not available offline through the current implementation.</p>
+          </details>
+          <details>
+            <summary>What reference format should I enter?</summary>
+            <p>Use the format Book Chapter:Verse, such as Luke 1:37. The extension also accepts the slash form, such as luke/1:37, for compatibility with the original command reference.</p>
+          </details>
+          <details>
+            <summary>Does Mikveh save my searches or favourite verses?</summary>
+            <p>The current version stores your theme preference only. It does not include verse history, favourites, user accounts, or cloud synchronisation.</p>
+          </details>
+          <details>
+            <summary>Can I modify or redistribute the source?</summary>
+            <p>Not under the current license by default. Mikveh uses a proprietary source-available license with limited personal-use permissions and restrictions on modification, derivative works, redistribution, and commercial use. Read LICENSE.txt and contact the copyright holder for permission.</p>
+          </details>
+          <details>
+            <summary>Why is there no Chrome Web Store button?</summary>
+            <p>Mikveh is not currently published in the Chrome Web Store. Installation instructions use Git clone and Chrome's Load unpacked workflow only.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-section page-width">
+      <div class="closing-panel">
+        <div class="section-label light-label"><span class="section-line"></span> MIKVEH / BIBLE VERSE FINDER</div>
+        <h2>Keep a verse<br><em>close at hand.</em></h2>
+        <p>Discover a random passage, search a reference, and carry the words with you.</p>
+        <a class="button button-inverted" href="#installation">Install from source <span aria-hidden="true">↑</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-top">
+      <a class="brand footer-brand" href="#top"><span class="brand-mark"><img src="../icons/icon32.png" width="22" height="22" alt=""></span><span>mikveh</span></a>
+      <p>Scripture, close at hand.</p>
+      <a class="back-top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+    <div class="page-width footer-bottom">
+      <span>© <span id="year"></span> Darshseraphic · Mikveh</span>
+      <span class="footer-attribution">Bible text service: <a href="https://bible-api.com/" target="_blank" rel="noreferrer">bible-api.com</a></span>
+    </div>
+  </footer>
+</body>
+</html>
